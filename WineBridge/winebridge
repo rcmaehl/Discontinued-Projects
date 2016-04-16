@@ -1,0 +1,92 @@
+#!/bin/bash
+#Coded by FCoFix.Org - Robert C. Maehl - fcofix@aol.com
+#
+#This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License.
+#
+#Licensed Since 2012
+#
+#This script is not completely stable and should NOT be used in any publicly distributed program or script.
+#If you would like to use a stable and optimized version of this in a free non-personal program or script
+#please contact the provided email address. FCoFix.Org is NOT responsibile for any damages done to your
+#property, whether intellectual or of other type, caused by this script.
+#
+#Do you really want to have to spend thousands of dollars to get on a plan and have to appear in court?
+#Make sure to give us our credit.
+#
+#Thanks - FCoFix.Org Staff
+
+I=`whoami`
+CD="/home/$I/.wine/drive_c/users/$I/Temp"
+PID="$CD/winebridge_pid"
+LOCK="$CD/winebridge_lock"
+STDIN="$CD/winebridge_stdin"
+STDOUT="$CD/winebridge_stdout"
+VERSION="1.0.2"
+ERRORNUM="$CD/winebridge_errornum"
+Fatal() {
+	kill -9 `cat "$CD/WB_Executed_PID"`
+	kill -9 `cat "$CD/$PID"
+`	rm -rf "$CD/{$PID,$LOCK,$STDIN,$STDOUT,$ERRORNUM,WB_Executed_PID}"
+	exit 1
+}
+
+Help() {
+	echo "Usage: winebridge [parameters]"
+	echo
+	echo "Parameters:"
+	echo " -h         --help             Display this help. Must be before other parameters."
+	echo " -k         --kill             Kills running winebridge instance."
+	echo
+	echo "Script Requirements:"
+	echo " These are not currently checked for. I may add automatic checking in a later version."
+	echo " It is the responibility of the user to ensure that the requirements of this script are"
+	echo " installed on the system. You can check if these are installed using 'whereis'."
+	echo
+	echo " Command    Location(s)        What it does:"
+	echo " bash       /bin/bash          Enviroment that this script runs under."
+	echo " chmod      /bin/chmod         Changes file permissions."
+	echo " clear      /usr/bin/clear     Clears the Screen."
+	echo " echo       /bin/echo          Displays text."
+	echo " kill       /bin/kill          Kills running winebridge instance."
+	echo " python2.7  Too many to list   Allows for extra commands."
+	echo " rm         /bin/rm            Deletes files for next use."
+	echo " sleep      /bin/sleep         Prevents the cpu from being at 100% constantly."
+	echo
+	echo "Bug reporting:"
+	echo " This script SHOULD BE bug free. If problems occur check your command line entry and"
+	echo " check script requirements. If problems still occur please visit our github."
+	echo
+	echo "winebridge $VERSION - FCoFix - Robert C. Maehl"
+}
+
+Kill() {
+	if [[ -e $PID ]]; then
+		kill -9 `cat $PID`
+		rm -rf $PID
+	else
+		echo "WineBridge not running."
+	fi
+}
+
+Loop() {
+	while sleep 0.1; do
+		if [[ -e $STDIN ]]; then
+			rm -rf $LOCK $STDOUT $ERRORNUM
+			clear
+			chmod +x $STDIN
+			echo >> $LOCK
+			$STDIN >> $STDOUT
+			rm -rf $LOCK $STDIN || FATAL
+		fi
+	done
+}
+
+while [[ $1 == -* ]]; do
+	case "$1" in
+		-h|--help) Help; exit 0;;
+		-k|--kill) Kill; exit 0;;
+		-*) echo "Invalid parameter: $1" 1>&2; exit 1;;
+	esac
+done
+echo $PPID > $PID
+Loop

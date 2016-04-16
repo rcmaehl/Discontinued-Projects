@@ -1,0 +1,167 @@
+#!/bin/bash
+
+#Set Default Variables
+legacy=0
+version="1.5.2"
+start="0:00"
+test=0
+y=0
+
+#Adjust alarm hour if alarm minutes is greater than 59
+Adjust_Hour() {
+	if (( $m >= 60 )); then
+		m=0
+		h=$((10#$h+1))
+	fi
+}
+
+#Display Clock
+Display_Clock() {
+	clear
+	date=`date +%R`
+	time=`printf '%02d:%02d\n'  "$h" "$m"`
+	echo "AlarmClock $version"
+	echo "---------------------------------"
+	echo "It is currently:            $date"
+	echo "Alarm is set for:           $time"
+	echo "---------------------------------"
+}
+
+#Display Help
+Display_Help() {
+	echo "Usage: alarmclock [parameters] hh:mm [media file]"
+	echo
+	echo "Parameters:"
+	echo " -h         --help             Display this help. Must be before other parameters."
+	echo " -l         --legacy           For old computers. Recommended if problems have occured."
+	echo " -t         --test             Sets the alarm to go off on the next minute. Ignores any"
+	echo "                               custom alarm time or file."
+	echo
+	echo "Script Requirements:"
+	echo " These are not currently checked for. I may add automatic checking in a later version."
+	echo " It is the responibility of the user to ensure that the requirements of this script are"
+	echo " installed on the system. You can check if these are installed using 'whereis'."
+	echo
+	echo " bash       /bin/bash          Enviroment that this script runs under."
+	echo " clear      /usr/bin/clear     Clears the Screen."
+	echo " date       /bin/date          Gets the current time."
+	echo " echo       /bin/echo          Displays the Clock."
+	echo " killall    /usr/bin/killall   Prevents redundant mplayers."
+	echo " mplayer    /usr/bin/mplayer   Plays the alarm."
+	echo " printf     /usr/bin/printf    Ensures proper spacing."
+	echo " sleep      /bin/sleep         Prevents the cpu from being at 100% constantly."
+	echo " timeout    /usr/bin/timeout   Prevents redundant mplayers."
+	echo
+	echo "Bug reporting:"
+	echo " This script IS bug free. If problems occur try the --legacy parameter, check your"
+	echo " command line entry, and/or check script requirements. All bugs and errors are caused by"
+	echo " the user. The developer of this script does not give support for incompetance and/or"
+	echo " stupidity."
+	echo
+	echo "alarmclock $version - FCoFix - Robert C. Maehl"
+}
+
+#Alarm Check Loop
+Loop() {
+	while sleep 1; do
+		if [[ $(date +%S) = '00' ]]; then
+			y=1
+			Display_Clock
+		fi
+		if [[ $(date +%R) = $(printf '%02d:%02d\n'  "$h" "$m") ]]; then
+			if [[ $y = 1 ]]; then
+				Sound_Alarm
+			fi
+		fi
+	done
+}
+
+#Set the alarm
+Set_Alarm() {
+	h=$((10#${1%:*}))
+	m=$((10#${1#*:}))
+	if [[ $test = 1 ]]; then
+		y=1
+	else
+		y=0
+	fi
+}
+
+#Plays the Alarm
+Sound_Alarm() {
+	timeout --kill-after=$((60-$(date +%S))) --signal=9 $((59-$(date +%S)-$legacy)) mplayer -msglevel all=-1 $a -loop 0 &
+	sleep 1
+	Display_Clock
+	if [[ $test = 1 ]]; then
+		read -p "((Q)uit/(S)nooze): " -t $((58-$(date +%S)-$legacy)) action || action=None
+	else
+		read -p "((Q)uit/(R)eset/(S)nooze): " -t $((58-$(date +%S)-$legacy)) action || action=None
+	fi
+	if [[ $action = [Ss]?([Nn][Oo][Oo][Zz][Ee]) ]]; then
+		m=$((10#$m+5))
+		Adjust_Hour
+	elif [[ $action = [Rr]?([Ee][Ss][Ee][Tt]) ]]; then
+		if [[ $test = 1 ]]; then
+			killall mplayer
+			exit 1
+		else
+			Set_Alarm $start
+		fi
+	elif [[ $action = [Qq]?([Uu][Ii][Tt]) ]]; then
+		killall mplayer
+		exit 0
+	elif [[ $action = None ]]; then
+		m=$((10#$m+1))
+		Adjust_Hour
+	fi
+	Display_Clock
+	killall mplayer
+}
+
+#Check Parameters and if nothing special set the alarm
+while [[ $1 == -* ]]; do
+	case "$1" in
+		-h|--help) Display_Help; exit 0;;
+		-l|--legacy) legacy=10; shift;;
+		-t|--test) test=1; shift;;
+		-*) echo "Invalid parameter: $1" 1>&2; Display_Help; exit 1;;
+	esac
+done
+
+start=$1
+if [[ $test = 0 ]]; then
+	if [[ -n $1 && -n $2 ]]; then
+		if [[ -e $2 ]]; then
+			a=$2
+			Set_Alarm $1
+		else
+			echo $2 "Not Found"
+			exit 1
+		fi
+	elif [[ -n $1 ]]; then
+		a=./Sandstorm.mp3
+		if [[ -e $a ]]; then
+			Set_Alarm $1
+		else
+			echo $a "Not Found"
+			exit 1
+		fi
+	else
+		exit 1
+	fi
+else
+	a=./Sandstorm.mp3
+	if [[ -e $a ]]; then
+		Set_Alarm `date +%R`
+	else
+		echo $a "Not Found"
+		exit 1
+	fi
+fi
+
+if (($h < 0 || $h > 23 || $m < 0 || $m > 59)); then
+	exit 1
+fi
+
+Display_Clock && Loop
+exit 0

@@ -23,6 +23,7 @@ STDIN="$CD/winebridge_stdin"
 STDOUT="$CD/winebridge_stdout"
 VERSION="1.0.2"
 ERRORNUM="$CD/winebridge_errornum"
+
 Fatal() {
 	kill -9 `cat "$CD/WB_Executed_PID"`
 	kill -9 `cat "$CD/$PID"

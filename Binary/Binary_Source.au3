@@ -1,3 +1,5 @@
+; Discontinued: Non-sensical program.
+
 #NoTrayIcon
 #Region ;**** Directives created by AutoIt3Wrapper_GUI ****
 #AutoIt3Wrapper_UseUpx=n

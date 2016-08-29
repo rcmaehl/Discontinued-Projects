@@ -1,3 +1,5 @@
+; Discontinued: Updated WineBridge.au3 incompletely without updated WineBridge_Terminal. Not even sure if working.
+
 ; #WineBridge Global @error Values# ==============================================================================================
 ; -512 to 1023 ..; Reserved for AutoIt Command Exit Codes
 ; 1024 ..........; Success

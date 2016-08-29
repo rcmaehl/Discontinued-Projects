@@ -1,5 +1,7 @@
 #!/bin/bash
 
+#Discontinued: No new coding needed.
+
 #Set Default Variables
 legacy=0
 version="1.5.2"

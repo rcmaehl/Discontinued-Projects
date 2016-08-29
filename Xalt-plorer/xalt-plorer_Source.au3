@@ -1,4 +1,6 @@
-#NoTrayIcon
+; Discontinued: Attempting to create a Windows Desktop for Wine is above my skill level and current implimentation is very laggy ctrl wise.
+
+oTrayIcon
 #Region ;**** Directives created by AutoIt3Wrapper_GUI ****
 #AutoIt3Wrapper_UseUpx=n
 #EndRegion ;**** Directives created by AutoIt3Wrapper_GUI ****

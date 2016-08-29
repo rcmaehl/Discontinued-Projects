@@ -1,4 +1,7 @@
 #!/bin/bash
+#
+#DISCONTINUED: No commented code, probable desync from Autoit coding. CBA
+#
 #Coded by FCoFix.Org - Robert C. Maehl - fcofix@aol.com
 #
 #This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License.
@@ -8,7 +11,7 @@
 #This script is not completely stable and should NOT be used in any publicly distributed program or script.
 #If you would like to use a stable and optimized version of this in a free non-personal program or script
 #please contact the provided email address. FCoFix.Org is NOT responsibile for any damages done to your
-#property, whether intellectual or of other type, caused by this script.
+#property, whether intellectual or otherwise, caused by this script.
 #
 #Do you really want to have to spend thousands of dollars to get on a plan and have to appear in court?
 #Make sure to give us our credit.

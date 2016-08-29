@@ -1,3 +1,5 @@
+; Discontinued: Updated WineBridge.au3 incompletely without updated WineBridge_Terminal. Not even sure if working.
+
 #NoTrayIcon
 #include <GUIConstantsEx.au3>
 #include <WineBridge.au3>

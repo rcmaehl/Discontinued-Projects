@@ -1,3 +1,5 @@
+; Discontinued: No commented coding, no clue what I was doing back then.
+
 #NoTrayIcon
 #Region ;**** Directives created by AutoIt3Wrapper_GUI ****
 #AutoIt3Wrapper_Version=beta

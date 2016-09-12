@@ -1,0 +1,38 @@
+CREDITS:
+
+* agdurrette did a stellar job beta testing and provided a great user's-eye view of KidSafe
+
+* gluxon provided a critical bug report for Vista, and subsequently confirmed the bug fix
+
+* digitxp made some valuable suggestions, provided a great new icon, and pointed out a flaw in KidSafe's PAF compliance
+
+* BuddhaChu made sure KidSafe wasn't violating any trademarks
+
+* Aaron Ballman provided the impressive & powerful Windows Functionality Suite; KidSafe uses code from it in several places.
+
+* d3nn1as provided a critical function to get a file path from a process ID
+
+* babasse created the cool padlock icon (http://www.iconspedia.com/icon/padlocks-1464.html)
+
+* tiarescott created the nice beach background that is KidSafe's default background image (http://www.flickr.com/photos/tiarescott/33505225/sizes/o/)
+
+* Tim Clark, GizmoKid2005 and John T. Haller made some valuable suggestions on making KidSafe more secure (less vulnerable to being abused by malicious users)
+
+* Randy Birch provided the LockRemovableDevices function
+
+* Chris Morgan thoroughly went over the PAF launcher and other files and made several changes, including rewriting the launcher
+
+* Tony Welsh provided the command-line parser (http://evolvedcode.net/content/code_vbcmdline/)
+
+* Duncan Edwards Jones provided the interprocess communication code (http://www.codeproject.com/KB/vbscript/vb6ipc.aspx)
+
+* Alexander Triantafyllou provided the GetRelativePath code (http://freevbcode.com/ShowCode.asp?ID=6137&NoBox=True)
+
+* Robert C. Maehl helped debug versions and hosts the Kidsafe Update page, anti-spam IP gatherer, and redirecting URLs
+
+* weatherkid is doing a good job handling the KidSafe source repository, provided a digital certificate, and helped with several other important tasks
+
+* Onesimus Prime, guinness, webfork, joby_toss, and other The Portable Freeware Collection (http://www.portablefreeware.com) members did an excellent job testing KidSafe, finding bugs, and providing great feedback & feature requests.
+
+
+Thanks to everyone else who helped with KidSafe; whether big or small, your contribution was valuable in KidSafe's development!

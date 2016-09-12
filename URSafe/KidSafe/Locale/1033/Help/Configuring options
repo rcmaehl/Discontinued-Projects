@@ -1,0 +1,35 @@
+Here's a list of the available options and what they do:
+
+Computer idle time, in minutes, before KidSafe locks the system: sets the timeout in screensaver mode. See "Select KidSafe's mode" for more details.
+
+Enable auto-update: If this is turned on, KidSafe will automatically check for updates every few days. The number of days to wait between update checks is specified by the "Days to wait between each update check" setting.
+
+Lock Alt-Escape: disables the Alt-Escape key combination. However, other key combinations including Alt or Escape, such as Alt-Enter or Ctrl-Escape, aren't blocked.
+
+Lock Alt-Tab: disables the Alt-Tab key combination. However, other key combinations including Alt or Tab, such as Alt-Escape or Ctrl-Tab, aren't blocked.
+
+Lock Ctrl-Escape: disables the Ctrl-Escape key combination. However, other key combinations including Ctrl or Escape, such as Alt-Escape or Ctrl-S, aren't blocked.
+
+Lock removable devices - prevents removable devices from being ejected and prevents the CD tray from being opened.
+
+Lock Task Manager: disables the Task Manager. This also disables any 3rd-party task managers, as long as they've replaced the default Windows Task Manager; 3rd-party task managers that haven't replaced the Windows Task Manager won't be blocked.
+
+Lock the Windows key: disables the Windows key (also known as the Start key) and all the key combinations that include it, such as Windows+R (runs a program), Windows+E (launches a new Explorer window), and Windows+M (minimizes all open windows).
+
+Place the KidSafe window on top of every other window: this will place - and keep - the KidSafe window on top of every other window. This includes the Start Menu and Alt-Tab dialog; in other words, setting this preference to true essentially includes blocking everything else (Ctrl-Escape, Alt-Escape, Alt-Tab, Task Manager, Windows key, etc.) as well.
+
+Prevent system shutdown: Prevents the system from being shut down, rebooted, etc. Some of your programs may be closed if a system shutdown is initiated; this is a limitation of Windows, not KidSafe, and KidSafe can't stop this from happening. However, KidSafe can and will prevent the system from being shut down.
+
+Select a background image to use: allows you to set the background image used for the KidSafe window. Images in BMP, GIF and JPG/JPEG format are guaranteed to work; other image formats may work, but probably won't unless you have QuickTime installed on your computer. Because of this restriction, only BMP, GIF and JPG/JPEG images are shown in the Options dialog; if you want to use another image type, you'll need to manually edit the configuration file.
+If you specify a file that doesn't exist or isn't an image file, KidSafe will use its default background image instead.
+If you've set a custom background image, you can use the Reset button to revert to the default KidSafe background image.
+
+Select hotkey: allows you to set the user-defined hotkey that will show the KidSafe window. The hotkey works in screensaver mode as well as hotkey mode.
+
+Select KidSafe's mode: allows you to select whether KidSafe should operate in normal mode, screensaver mode, or hotkey mode. In normal mode, KidSafe will immediately open its fullscreen window. In screensaver mode, KidSafe will run in the background and monitor the system. KidSafe will essentially behave like a screensaver, checking for system activity; if the system remains inactive for the number of minutes specified by the "Computer idle time, in minutes, before KidSafe locks the system" box, KidSafe's fullscreen window will open. In hotkey mode, KidSafe will run in the background and wait for you to press the user-defined hotkey that activates KidSafe.
+
+Treat the password textboxes like password-entry fields: this will hide the contents of the "password" boxes behind a line of asterisks, instead of showing the contents in plain text. This can be really useful if you're trying to stop a kid who's old enough to read.
+
+Use absolute paths/use relative paths: allows you to specify the way KidSafe looks for external files. If you set this option to "use relative paths", KidSafe will use relative paths for external files it uses (e.g. the background image); this can be useful when you need to use KidSafe from a USB drive. If set to "use absolute paths" (the default), it'll use absolute paths. (Most users can leave this setting at its default)
+
+Use system tray icon: allows you to turn on/off the KidSafe system tray icon. If you turn this option on, KidSafe will show its icon in the system tray; double-clicking the tray icon will show the KidSafe window. (The tray icon is only shown in screensaver mode or hotkey mode, since it isn't necessary in normal mode.) The tray icon also serves as a reminder that KidSafe is running.

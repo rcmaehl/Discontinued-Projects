@@ -1,6 +1,6 @@
 ; Discontinued: Non-sensical program.
-
 #NoTrayIcon
+;Coded by FCoFix.org - Robert C. Maehl
 #Region ;**** Directives created by AutoIt3Wrapper_GUI ****
 #AutoIt3Wrapper_UseUpx=n
 #EndRegion ;**** Directives created by AutoIt3Wrapper_GUI ****

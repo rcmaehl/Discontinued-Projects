@@ -1,0 +1,487 @@
+Version 0.36.0.0 (2010-04-20)
+
+Improvement: Added auto-updater (thanks to rcmaehl for RFE)
+
+Improvement: Activity log now logs attempts to access the Options dialog too
+
+Improvement: Added a textbox to the anti-abuse shutdown window; it can be used as a "scratchpad" for solving the math problem (thanks to rcmaehl for RFE)
+
+
+Version 0.35.0.0 (2010-04-19)
+
+Bug fix: Some of the text in the "check for updates" window was run together (thanks to rcmaehl for report)
+
+Improvement: Screensaver mode now waits for the specified number of minutes instead of seconds (thanks to webfork for RFE)
+
+Improvement: Options dialog now automatically switches to the Password tab if the password isn't set (thanks to guinness for RFE)
+
+Improvement: Added activity log to record all password-entry attempts & anti-abuse shutdown attempts (thanks to rcmaehl for RFE)
+
+Improvement: Debugging log now shows more-legible entries
+
+Improvement: On KidSafe's first run, the main KidSafe window won't be shown; only the Options dialog will (thanks to John T. Haller for RFE)
+
+Improvement: Added a button to reset the background image (thanks to rcmaehl for RFE)
+
+
+Version 0.34.0.0 (2010-04-16)
+
+Bug fix: The PAF build of KidSafe would refuse to launch due to changes made in version 0.32.1.0
+
+Improvement: prefs dialog can now be closed at any time, even if the password isn't set (thanks to webfork for RFE)
+
+Improvement: prefs dialog now has a "Help" button so new users can view the help system while setting up KidSafe
+
+
+Version 0.33.0.0 (2010-04-15)
+
+Bug fix: "OK" button in the Options dialog sometimes had "Next" as its caption
+
+Bug fix: KidSafe will only try to hook the keyboard if one of the keyboard combinations is locked. This should reduce conflicts with antivirus apps (thanks to John T. Haller for report)
+
+Improvement: The anti-abuse shutdown window can now be accessed from a button on the main KidSafe window as well as in the "Tools -> Anti-abuse shutdown" menu item (thanks to John T. Haller for RFE)
+
+
+Version 0.32.1.0 (2010-04-14)
+
+Bug fix: When the On Top mode was set, the options window, Help window, About window, etc. were shown behind the main KidSafe window (thanks to rcmaehl for report)
+
+Improvement: Updated some translation strings (thanks to rcmaehl)
+
+Improvement: Updated the PAF build to use the latest version of the PortableApps.com Launcher
+
+
+Version 0.32.0.0 (2010-04-06)
+
+Bug fix: KidSafe would display an "Unable to open the prefs file!" error message on first run (thanks to webfork for report)
+
+Improvement: The preferences dialog is now tabbed instead of wizard-style (thanks to webfork for RFE; thanks for marlop & gluxon for suggestions)
+
+
+Version 0.31.0.0 (2010-03-31)
+
+Bug fix: The user-selected locale wasn't saved properly
+
+Improvement: Streamlined the locale-loading code, thereby making it smaller, faster, and less error-prone
+
+
+Version 0.30.0.0 (2010-03-22)
+
+Bug fix: Under certain circumstances, Windows would display a "Cannot find disk in drive" error when "Lock removable devices" was set; if "Put the KidSafe window on top" was set, this could require a hard reboot to fix (thanks to weatherkid for report)
+
+Bug fix: The KidSafe window could potentially have been moved/resized by tools such as the freeware app "MoveMe"
+
+Improvement: KidSafe now allows the Windows screensaver to appear above KidSafe, even when the On Top mode is on
+
+Improvement: KidSafe now detects the system language and loads the matching locale if the user hasn't specified a locale (e.g. on KidSafe's first run) (thanks to Aaron Ballman for the LocaleInfo class in his Windows Functionality Suite; I modified & used it to determine the system locale)
+
+
+Version 0.29.0.0 (2010-03-19)
+
+Bug fix: Using KidSafe with multiple monitors would only cover the first (thanks to kendoll and notsure for reporting; thanks to Zalu for the fix and Tim Hare for some valuable information)
+
+
+Version 0.28.0.0 (2010-03-12)
+
+Bug fix: Fixed some problems with the file-path parser (thanks to Onesimus Prime for report & for helping track this down)
+
+Improvement: Improved compliance with the Windows Human Interface Guidelines
+
+Improvement: Cleaned up some of KidSafe's windows
+
+Improvement: Made KidSafe much more accessibility-friendly
+
+Improvement: "Enter password:" label on the KidSafe main page will automatically change its color to make it more visible
+
+Improvement: Added the ability to switch between absolute paths and relative paths (thanks to Onesimus Prime for RFE)
+
+Improvement: KidSafe.exe is now digitally signed to prevent tampering
+
+Changed: Replaced the administrator unlock with a different anti-abuse feature: the ability to unlock KidSafe by solving a moderately-complex math problem (thanks to John T. Haller for RFE)
+NOTE: this is a not a change we take lightly; however, to prevent abuse and its consequences (e.g. having PortableApps and/or KidSafe banned from public computers), as well as problems resulting from children having access to administrator accounts, a different anti-abuse feature was deemed necessary. We have spent a great deal of time discussing and implementing this to cause the least inconvenience possible while still maintaining the highest security possible; we apologize for any inconvenience this may cause users.
+
+
+Version 0.27.0.0 (2010-02-26)
+
+Improvement: Added built-in update checker (note that, if a new version of KidSafe is found and you choose to download it, the download page will open in your default browser - if you're using the PAF build and wish to use your portable browser, you should manually download updates instead. Using the built-in update checker is fine, you should just download the updates manually if you want to have total portability)
+
+Improvement: Rewrote a lot of the locale-handling code to be faster and use less memory
+
+
+Version 0.26.0.0 (2010-02-25)
+
+Bug fix: Password-entry fields in the Options dialog were multiline even though multiline passwords are no longer supported
+
+Improvement: Upgraded to a newer, more powerful version of the compiler
+
+Improvement: Credits can now be translated
+
+
+Version 0.25.8.0 (2010-02-23)
+
+Bug fix: Using the administrator unlock feature could cause problems under certain circumstances (thanks to Onesimus Prime for report)
+
+Bug fix: Using the keyboard to navigate the Options dialog could cause a crash under certain circumstances (thanks to Onesimus Prime for report)
+
+Bug fix: Using a relative path for the background graphic could have strange results (thanks to Onesimus Prime for report)
+
+Improvement: Added better error handling
+
+
+Version 0.25.7.0 (2010-02-21)
+
+Bug fix: trying to use the "Administrator unlock" feature could lock up KidSafe under certain circumstances (thanks to Onesimus Prime and rcmaehl for report and rcmaehl for fix)
+
+Bug fix: Preferences file couldn't be created under certain circumstances, resulting in a perpetual preference-setting and restarting cycle (thanks to rcmaehl for report)
+
+Improvement: Cleaned up a lot of code
+
+
+Version 0.25.6.1 (2010-02-19)
+
+Bug fix: Command-line parameters were incorrectly parsed after a change in 0.25.6.0
+
+Improvement: PAF launcher now uses the PortableApps.com Launcher instead of a custom launcher
+
+Changed: Removed Data folders, since they aren't necessary anyway (thanks to Onesimus Prime for report)
+
+Changed: Removed "Default" localization, which was only being used for testing (thanks to guinness for report)
+
+
+Version 0.25.6.0 (2010-02-19)
+
+Bug fix: Several controls ignored the translation files, remaining translated into English instead
+
+Bug fix: Absolute paths were stored for the background graphic, making that setting non-portable (thanks to Onesimus Prime for report)
+
+Improvement: Escape key now cancels several windows, including the Options window
+
+Improvement: Code cleanup: Moved a lot of "loose" code into methods to make it easier to read
+
+Improvement: KidSafe now intelligently detects whether it's installed or not, and saves its settings in the appropriate location. This even works if KidSafe is installed but you're running a separate installation (e.g. from a USB drive)
+
+Improvement: Normal KidSafe installer doesn't require admin rights anymore
+
+Changed: Removed the "Warning" label in the About window, as it may conflict with the GPL
+
+Changed: "Administrator unlock" anti-abuse feature is now found under "Tools -> Anti-abuse shutdown" instead of being on the main screen
+
+
+Version 0.25.5.0 (2010-02-12)
+
+Bug fix: Even when there's no preferences file, the default KidSafe background still loads
+
+Bug fix: Alt-F4 key combination wouldn't work for any window when KidSafe was running
+
+Bug fix: Administrator unlock feature didn't work under Windows Vista or Windows 7 (thanks to notsure, kendoll, Bruce, and rcmaehl for report)
+
+
+Version 0.25.4.0 (2010-02-10)
+
+Bug fix: Some blank error messages were shown if no localizations were present
+
+Bug fix: Localization preference sometimes wasn't saved
+
+Bug fix: Help files were misplaced, causing them not to load
+
+Improvement: Cleaned up a lot of code
+
+
+Version 0.25.3.0 (2010-01-29)
+
+Improvement: Cleaned up a lot of code to make it easier to read
+
+Improvement: Changed multi-line "unlock text" textboxes to single-line (thanks to notsure and agdurrette for RFE)
+
+
+Version 0.25.2.0 (2010-01-28)
+
+Bug fix: Much of the localization-handling code was broken
+
+Bug fix: A few of the controls in the Options dialog had their tab order set incorrectly
+
+Bug fix: "Use password dialog" setting wasn't properly respected sometimes
+
+Improvement: Entering invalid unlock text now clears the "unlock text" textboxes (thanks to notsure for RFE)
+
+
+Version 0.25.1.0 (2010-01-27)
+
+Bug fix: Under certain circumstances, KidSafe would display an "Unable to open preferences file" error, then require the unlock text to continue. However, the unlock text was never set under these circumstances, leading to a catch-22 (thanks to agdurrette for report)
+
+
+Version 0.25.0.0 (2010-01-27)
+
+Bug fix: Localization wasn't properly loaded or saved
+
+Improvement: Added graphical interface to select localization
+
+Improvement: Added "Lock removable devices" feature (thanks to godey for RFE)
+
+Improvement: PAF installer now uses the updated (version 1.0.3) PortableApps.com Installer
+
+
+Version 0.24.0.0 (2010-01-26)
+
+Bug fix: PAF version had several minor problems (thanks to Chris Morgan for reports)
+
+Improvement: Added capability to use localizations
+
+Improvement: Replaced option textboxes with checkboxes (thanks to Chris Morgan, agdurrette, ve4jhj, and others for RFE)
+
+Improvement: PAF version now uses a completely rewritten launcher (thanks to Chris Morgan for rewriting the launcher)
+
+
+Version 0.23.0.0 (2010-01-24)
+
+Improvement: Several function calls have been rewritten to support Unicode; this will make localizing KidSafe possible
+
+Improvement: Deleted some unnecessary code
+
+Improvement: Simplified and stabilized the code to remove the "Move" item from each window's application menu
+
+
+Version 0.22.0.0 (2010-01-24)
+
+Bug fix: Some controls had their titles truncated on systems with large fonts
+
+Improvement: Added "Administrator unlock" feature which lets a local administrator unlock KidSafe using their PC password instead of the KidSafe password (thanks to John T. Haller and Chris Morgan for RFE)
+
+Version 0.21.0.0 (2010-01-19)
+
+Bug fix: Pressing the KidSafe hotkey while the KidSafe window was shown would re-show the KidSafe window, causing a flicker which could allow little kids to guess the hotkey
+
+Bug fix: "Move" option for each window could be used to move the Help, About, or Credits window offscreen, making it impossible to access the unlock text box without rebooting the system
+
+
+Version 0.20.1.0 (2010-01-11)
+
+Bug fix: Help files were only loaded correctly the first time the help window was shown
+
+Bug fix: Screensaver mode failed to detect mouse movement, so the KidSafe window was sometimes shown inappropriately (thanks to agdurrette for report)
+
+Improvement: If the help files can't be founded or loaded, help window displays a message instead of remaining blank
+
+
+Version 0.20.0.0 (2010-01-07)
+
+Bug fix: "Confirm new unlock text" textbox sometimes went into password mode (hid text behind a row of asterisks) inappropriately
+
+Improvement: "Treat unlock text boxes as password-entry fields" now defaults to "YES" and changes to "YES" if the user enters anything other than "YES" or "NO"
+
+
+Version 0.19.1.0 (2009-12-26)
+
+Bug fix: "Confirm new unlock text" textbox sometimes went into password mode (hid text behind a row of asterisks) inappropriately
+
+Improvement: "Treat unlock text boxes as password-entry fields" now defaults to "YES" and changes to "YES" if the user enters anything other than "YES" or "NO"
+
+
+Version 0.19.0.0 (2009-12-23)
+
+Improvement: "Enter new unlock text" in Options dialog now requires you to confirm the new unlock text (thanks to sar3th for RFE)
+
+
+Version 0.18.0.0 (2009-12-21)
+
+Improvement: Restructured Prefs.dat
+
+Improvement: Rewrote help system to make it much easier to update, maintain, and add items to (users can now add their own help items as well).
+
+Improvement: User must be an admin to run KidSafe (thanks to Tim Clark for report)
+
+Improvement: Frequently checks to make sure the KidSafe executable exists; this will help avoid problems when running KidSafe from a flash drive (thanks to GizmoKid2005 for report)
+
+
+Version 0.17.0.0 (2009-12-18)
+
+Bug fix: Even if LockTaskManager was false, minimizing and restoring the KidSafe window would sometimes close the Task Manager
+
+Improvement: Updated Help system, including credits
+
+Improvement: Updated README
+
+Improvement: Updated code comments
+
+Improvement: Source code is now packaged in a simple, text-based format any text editor can open
+
+
+Version 0.16.1.0 (2009-12-15)
+
+Bug fix: Entering any unlock text would work, regardless of whether it was correct or not (thanks to agdurrette for report)
+
+Bug fix: "Use old unlock text" didn't correctly save the old unlock text, causing problems later on
+
+Improvement: If the settings folder doesn't exist, KidSafe will attempt to create it instead of failing silently; in the event the settings folder can't be created, KidSafe will display an error message before exiting
+
+
+Version 0.16.0.0 (2009-12-12)
+
+Bug fix: Setting LockTaskManager would keep the Task Manager locked even if the KidSafe window wasn't shown (i.e. in screensaver mode or hotkey mode)
+
+Improvement: "Options" dialog now has a "Cancel" button
+
+Improvement: Changed some code to make it less error-prone
+
+
+Version 0.15.0.0 (2009-12-12)
+
+Improvement: Opt-in system tray icon is now shown in screensaver mode and hotkey mode (thanks to agdurrette for RFE)
+
+Improvement: Added "Close" button in screensaver mode and hotkey mode; this functionality replaces the older SHIFT keypress + OK button combination. (thanks to agdurrette for RFE)
+
+Removed: System tray mode has been removed, since its functionality is now duplicated by hotkey mode
+
+
+Version 0.14.2.0 (2009-12-09)
+
+Bug fix: KidSafe lockdown settings were enforced even if the KidSafe window wasn't shown
+
+
+Version 0.14.1.0 (2009-12-08)
+
+Bug fix: Opening KidSafe without Prefs.dat being present would cause an endless loop in the Options dialog and, eventually, a crash
+
+Bug fix: Error messages displayed during the prefs-loading operation would show up behind the KidSafe window
+
+
+Version 0.14.0.0 (2009-12-08)
+
+Bug fix: Several of the project files, including most of the help system files, were treated as external files (this could cause problems for people trying to view KidSafe's source code)
+
+Improvement: Added System Tray mode (thanks to agdurrette for RFE)
+
+Improvement: PAF installer now uses the updated (version 1.0.1) PortableApps.com Installer
+
+
+Version 0.13.0.0 (2009-12-07)
+
+Bug fix: Debug logging was left on in version 0.12.2.0
+
+Bug fix: Some classes, modules, etc. were treated as external files
+
+Bug fix: "Select hotkey" preference in the Options dialog wasn't disabled when Normal mode was selected (thanks to agdurrette for reporting)
+
+Improvement: Deleted a lot of unnecessary code
+
+Improvement: Added more code comments & updated some existing comments to reflect recent changes in KidSafe's code
+
+Improvement: KidSafe window's caption is continually changed to a random-length string, not just a random-character string, making it even harder to close programatically.
+
+Improvement: Only one instance of KidSafe can be run at a time; this will prevent problems caused by multiple instances of KidSafe running (thanks to agdurrette for reporting)
+
+
+Version 0.12.2.0 (2009-12-06)
+
+Bug fix: Specifying an incorrect Mode value (such as 3) in the preferences file will now default to normal mode
+
+Bug fix: Entering the correct unlock text to use the preferences GUI wasn't required (entering ANY text would work, regardless of the correct unlock text)
+
+Bug fix: "Lock system shutdown" preference frequently prevented KidSafe from shutting down, even after the correct unlock text was entered
+
+
+Version 0.12.1.0 (2009-12-06)
+
+Bug fix: Error messages would be shown behind the KidSafe window, sometimes requiring a computer restart to close
+
+Bug fix: Changing the options using the preferences dialog would improperly restart KidSafe, resulting in it being unable to access the preferences file
+
+Bug fix: Part of the PAF launcher, responsible for copying Prefs.dat from DefaultData to Data on first run, was broken by a previous release 
+
+
+Version 0.12.0.0 (2009-12-05)
+
+Bug fix: KidSafe didn't check to make sure there was a hotkey set before entering Hotkey mode
+
+Bug fix: Setting KidSafe options without setting the hotkey again would clear the hotkey
+
+Bug fix: Trying to use an already-in-use hotkey will display an error message instead of failing silently
+
+Improvement: Updated Help system
+
+Improvement: Added custom background graphic option
+
+
+Version 0.11.0.0 (2009-12-04)
+
+Improvement: Added Hotkey mode
+
+Improvement: Holding down the Shift key and pressing OK in Screensaver mode or Hotkey mode will close KidSafe instead of just hiding the window; this functionality replaces the "Tools -> Shutdown" menu item
+
+
+Version 0.10.0.0 (2009-12-02)
+
+Improvement: Rewrote a lot of code to be cleaner & neater
+
+Improvement: If the Prefs.dat file is manually edited while KidSafe is running, the preferences will no longer be updated until KidSafe restarts; this will prevent a lot of trouble with some updated preferences being immediately updated in the KidSafe window and some updated preferences not being updated until KidSafe restarts.
+
+
+Version 0.9.0.0 (2009-12-01)
+
+Bug fix: Message boxes appeared behind the main KidSafe window, which required the computer to be restarted
+
+Bug fix: LockCtrlEscape now works without the KidSafe window having to be always on top
+
+Improvement: Default settings folder is now stored within the main KidSafe folder instead of being a separate folder; this will be helpful for the ZIP archives & the installers. PAF releases, thanks to the special launcher, can still use the separate Data folder.
+
+Improvement: Main KidSafe window continually changes its title to a random string, making it difficult or even impossible to close programatically.
+
+Improvement: Unlock text is no longer stored as plain text, making it significantly harder to crack
+
+Improvement: Added preferences GUI
+
+Improvement: "Unlock text" boxes are now treated as password-entry fields by default
+
+Improvement: Added new "Place the KidSafe window on top of every other window" preference
+
+Improvement: Speeded up keyboard input-handling (used when checking to see if a keypress should be blocked or not)
+
+Improvement: Added "Shutdown" menu item to shut down KidSafe in screensaver mode instead of having it hide for the period specified by TimeOut
+
+Improvement: Added help system
+
+
+Version 0.8.1.0 (2009-11-25)
+
+Bug fix: Other windows could be shown in front of the KidSafe window
+
+Bug fix: LockCtrlEscape didn't always work
+
+
+Version 0.8.0.0 (2009-12-24)
+
+Bug fix: The Start Orb could still be accessed on Windows Vista & Windows 7
+
+Bug fix: Even with LockTaskManager set to true, the Task Manager could sometimes be accessed
+
+Improvement: Added a beach background graphic to the KidSafe window instead of leaving a plain window
+
+
+Version 0.7.0.0 (2009-11-23)
+
+Bug fix: setting LockTaskManager to True failed to lock the Task Manager if the Task Manager was already running
+
+Improvement: added a shiny new icon (thanks for creating this, Babasse, and thanks for pointing me to it, digitxp!)
+
+Improvement: In the PAF build, help.html now links to the included ReadMe 
+
+
+Version 0.6.1.0 (2009-11-17)
+
+Bug fix: If the prefs file or unlock text are missing, KidSafe will abort on startup instead of after an unlock attempt
+
+Bug fix: Fixed a minor spelling error in the PAF launcher
+
+Bug fix: Fixed some minor problems with appinfo.ico and appinfo.ini
+
+Bug fix: Fixed a problem with the PAF package version number - it's now independent of the KidSafe version number, and accurately reflects the version of the KidSafe installer instead of the KidSafe application
+
+Bug fix: Corrected the PAF app category by changing it from "Utility" to "Utilities"
+
+Improvement: PAF installer now uses the updated (version 1.0) PortableApps.com Installer
+
+Improvement: Made other minor changes to the PAF installer 
+
+Version 0.6.0.0 (2009-11-15)
+
+Initial release

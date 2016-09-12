@@ -1,0 +1,245 @@
+[LocalizationInfo]
+Author=computerfreaker & rcmaehl
+FriendlyName=English
+
+
+[AboutWindow]
+AboutWindowTitle=About KidSafe
+
+AppName=KidSafe
+
+Credits=Credits
+
+OK=OK
+
+Version=Version
+
+
+[ActivityLog]
+OptionsChanged=One or more of KidSafe's options were changed.
+
+PasswordChanged=KidSafe's password was changed.
+
+SuccessfulAntiAbuseUnlock=A successful attempt was made to unlock KidSafe using the anti-abuse shutdown.
+
+SuccessfulOptionsUnlock=A successful attempt was made to unlock the Options dialog.
+
+SuccessfulUnlock=A successful attempt was made to unlock KidSafe.
+
+UnsuccessfulAntiAbuseUnlock=An unsuccessful attempt was made to unlock KidSafe using the anti-abuse shutdown.
+
+UnsuccessfulOptionsUnlock=An unsuccessful attempt was made to unlock the Options dialog.
+
+UnsuccessfulUnlock=An unsuccessful attempt was made to unlock KidSafe.
+
+
+[ActivityLogWindow]
+ActivityLogWindowTitle=Activity Log
+
+Activity=Activity
+
+Date=Date
+
+
+[AntiAbuseWindow]
+AntiAbuseWindowTitle=Anti-Abuse Shutdown
+
+Cancel=Cancel
+
+EnterMathAnswerMessage=Enter your answer here:
+
+MathUnlock=Math unlock
+
+MathUnlockMessage=You can unlock KidSafe by solving a math problem (use + for plus, - for minus, * for multiplication, / for division, and ^ for powers):
+
+ProblemHelp=Use this textbox to help solve the problem:
+
+
+[CreditsWindow]
+CreditsWindowTitle=Credits
+
+
+[Errors]
+CantOpenPrefsFile=Unable to open the preferences file!
+
+ErrorCode=Error code:
+
+HotkeyInUse=This hotkey is already in use!
+
+InvalidHelpFiles=Error: unable to load one or more help files
+
+InvalidPassword=Invalid password!
+
+MissingHelpFiles=Error: no help files found! Please verify that the help folder exists.
+
+NoHotkey=There is no hotkey set!
+
+NoPassword=There is no password set!
+
+UpdateError=Error! Please try again later.
+
+
+[HelpWindow]
+HelpWindowTitle=Help Topics
+
+
+[MainWindow]
+AntiAbuseShutdown=Anti-abuse shutdown
+
+Close=Close
+
+EnterPassword=Enter the password:
+
+Hide=Hide
+
+OK=OK
+
+TrayIconHelpTag=KidSafe
+
+
+[Menus]
+Tools=&Tools
+Tools.Options=&Options
+Tools.AntiAbuseShutdown=Anti-abuse shutdown...
+Tools.ViewActivityLog=View activity log...
+
+Help=&Help
+Help.CheckForUpdates=Check for Updates
+Help.Contents=&Contents
+Help.About=&About KidSafe
+
+
+[OptionsWindow]
+Alt=Alt
+
+Back=Back
+
+Browse=Browse
+
+Cancel=Cancel
+
+ConfirmNewPassword=Confirm new password:
+
+Ctrl=Control
+
+DaysBetweenUpdateChecks=Days between each update check:
+
+EnableAutoUpdate=Enable auto-update
+
+EnterCurrentPassword=Enter the current password and press OK:
+
+EnterNewPassword=Enter the new password:
+
+Finish=Finish
+
+Help=Help
+
+LaunchKidSafe=Launch KidSafe
+
+LockAltEscapeHelp=
+
+LockAltEscapeMessage=Lock the Alt-Escape key combination
+
+LockAltTabHelp=
+
+LockAltTabMessage=Lock the Alt-Tab key combination
+
+LockCtrlEscapeHelp=
+
+LockCtrlEscapeMessage=Lock the Ctrl-Escape key combination
+
+LockOnTopHelp=This will put - and keep - the KidSafe window on top of every other window. This includes the Start Menu, Alt-Tab dialog, etc. - essentially locking everything.
+
+LockOnTopMessage=Put the KidSafe window on top of every other window
+
+LockRemovableDevicesHelp=This will keep all removable devices (including CD's) from being ejected. It will also keep the CD tray from being opened.
+
+LockRemovableDevicesMessage=Lock all removable devices
+
+LockSystemShutdownHelp=This will prevent the system from shutting down, rebooting, etc. It probably won't stop all of your applications from closing (unfortunately, this is a limitation of Windows, not KidSafe), but will prevent the system from shutting down.
+
+LockSystemShutdownMessage=Prevent system shutdown
+
+LockTaskManagerHelp=This will prevent the Task Manager from running; it locks 3rd-party replacement Task Manager applications, too. (It won't lock 3rd-party task managers unless they've replaced the default Windows Task Manager, though)
+
+LockTaskManagerMessage=Lock the Task Manager
+
+LockWindowsKeyHelp=This will lock the Windows key and all of its key combinations, such as Windows+R (Runs a program), Windows+E (Opens a new Explorer window), and Windows+M (minimizes all open windows).
+
+LockWindowsKeyMessage=Lock the Windows key (also known as the Start key)
+
+ModeHotkey=Hotkey
+
+ModeOrdinary=Ordinary
+
+ModeScreensaver=Screensaver
+
+OK=OK
+
+OptionsWindowTitle=KidSafe Options
+
+PrefsPanel.Appearance=Appearance
+
+PrefsPanel.Mode=Mode
+
+PrefsPanel.Password=Password
+
+PrefsPanel.Security=Security
+
+Reset=Reset
+
+ScreensaverDelayMessage=Computer idle time, in minutes, before KidSafe locks the system:
+
+SelectBackdrop=Select a background image to use:
+
+SelectHotkey=Select the hotkey to use:
+
+SelectMode=Select KidSafe's mode:
+
+SelectLocalization=Select a language to use:
+
+UseAbsolutePaths=Use absolute paths
+
+UseOldPassword=Use old password
+
+UsePasswordBoxesMessage=Treat the password boxes like password-entry fields
+
+UsePasswordBoxesHelp=The password boxes are generally treated as regular textboxes - in other words, what goes into them is shown in plain text. If you treat them like password-entry fields, what goes into them will be hidden behind a row of asterisks.
+
+UseRelativePaths=Use relative paths
+
+UseTextToSpeech=Use text-to-speech
+
+UseTrayIcon=Use a system tray icon
+
+Windows=Windows
+
+
+[UpdatesWindow]
+CheckingLatestVersion=Checking for latest version...
+
+CheckingVersionNumber=Checking version number...
+
+Congratulations=Congratulations, you've got the latest version!
+
+ConnectedToServer=Connected to server.
+
+CurrentVersion1=You're using version
+
+CurrentVersion2=, and the latest version is
+
+DelayedUpdateExplanation=To prevent a security breach, the download page won't be opened until KidSafe closes.
+
+DelayedUpdateMessage=The download page will be opened when KidSafe closes.
+
+NewVersion=There's a new version of KidSafe available! Do you want to download it?
+
+No=No
+
+OK=OK
+
+ReceivedData=Received data from server.
+
+UpdatesWindowTitle=Checking for Updates
+
+Yes=Yes

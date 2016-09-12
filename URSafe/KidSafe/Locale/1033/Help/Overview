@@ -1,0 +1,6 @@
+KidSafe is a computer-locking application designed to keep young children from messing something up.
+
+KidSafe will launch a full-screen window that hides the entire desktop, TaskBar, etc. Because the window is blank (except for the unlock entry box; see below for details), clicking it won't have any effect. Small children, who generally enjoy clicking the mouse, can click all they like without damaging anything.
+If the appropriate option is set, KidSafe also prevent the system from being shutdown - even if a small child presses the power button, the system won't shut down.
+
+If the appropriate options are set, KidSafe can disable all of the system keys - the Windows key, a combination of the Windows key and any other key, Alt-Tab, Alt-Escape, Ctrl-Escape, and Ctrl-Alt-Delete. This can be very useful, especially if a small kid keeps accidentally opening the Start Menu and selecting items in it: just disable the Windows key and the Ctrl-Escape key combination, and voila! No more Start Menu.

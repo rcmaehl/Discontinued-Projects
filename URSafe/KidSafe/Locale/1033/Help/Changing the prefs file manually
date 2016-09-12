@@ -1,0 +1,73 @@
+KidSafe's configuration file is fairly simple to edit manually as well (except for the password); there are only a handful of values you can edit, and almost all of the values are simple true/false choices.
+
+The configuration file is saved in the Data folder as Prefs.dat; here is its structure.
+
+  [GUI]
+  BackgroundGraphic=
+  HotKey=
+  HotKeyModifierMask=
+  Mode=
+  TimeOut=
+  UsePasswordDialog=
+  UseRelativePaths=
+  UseSystemTrayIcon=
+  
+  [Locks]
+  LockAltEscape=
+  LockAltTab=
+  LockCtrlEscape=
+  LockRemovableDevices=
+  LockShutdown=
+  LockTaskManager=
+  LockWindowsKey=
+  Password=
+  PutKidSafeOnTop=
+  
+  [Miscellaneous]
+  AutoUpdate=
+  DaysBetweenUpdateChecks=
+  LastUpdateCheckTime=
+  
+  
+AutoUpdate - true or false. Specifies whether KidSafe should automatically check for updates or not.
+
+BackgroundGraphic - the path to the image used as the background graphic for the KidSafe window. Images in BMP, GIF and JPG/JPEG format are guaranteed to work; other image formats may work, but probably won't unless you have QuickTime installed on your computer. Because of this restriction, only BMP, GIF and JPG/JPEG images are shown in the Options dialog; if you want to use another image type, you'll need to manually edit the configuration file.
+If you specify a file that doesn't exist or isn't an image file, KidSafe will use its default background graphic instead.
+
+DaysBetweenUpdateChecks - a numerical value. If AutoUpdate is turned on, specifies the number of days between KidSafe's automatic update checks.
+
+HotKey - a numerical value from 0 to 255. Specifies the virtual-key code for the KidSafe hotkey. (Unless you're a programmer, you probably don't want to edit this manually; it's easy to break something, and somewhat difficult to get the correct value)
+
+HotKeyModifierMask - a numerical value. Specifies whether the hotkey should include the Ctrl key, the Alt key, the Shift key, the Windows key (also known as the Start key), or a combination of these.
+
+LastUpdateCheckTime - a numerical value, usually in scientific notation. This value specifies the last time KidSafe checks for updates. MANUALLY EDITING THIS SETTING IS NOT RECOMMENDED.
+
+LockAltEscape - true or false. Specifies whether the Alt-Escape key sequence should be disabled or not.
+
+LockAltTab - true or false. Specifies whether the Alt-Tab key sequence should be disabled or not.
+
+LockCtrlEscape - true or false. Specifies whether the Ctrl-Escape key sequence should be disabled or not.
+
+LockRemovableDevices - true or false. Specifies whether removable devices should be prevented from ejecting or not; setting this value to true also prevents the CD tray from being opened.
+
+LockShutdown - true or false. Specifies whether the system shutdown is disabled or not. (Note: even if LockShutdown is set to true, trying to shutdown the computer might close some of your applications. This is a limitation of Windows, not KidSafe)
+
+LockTaskManager - true or false. Specifies whether the Task Manager should be locked or not. (Note that any running Task Manager instances will be closed)
+
+LockWindowsKey - true or false. Specifies whether the Windows key (aka the Start key) should be disabled or not. If set to true, it will also disable all key combinations involving the Windows key, including Windows+R (run a program) and Windows+M (minimize all windows)
+
+Mode - 0, 1 or 2. Specifies whether KidSafe should be in normal mode, screensaver mode or hotkey mode. If set to 0, KidSafe will immediately open its fullscreen window; if set to 1, KidSafe will run in the background and monitor the system. KidSafe will essentially behave like a screensaver, checking for system activity; if the system remains inactive for the number of minutes specified by TimeOut, KidSafe's fullscreen window will open. This could be extremely useful for someone who has to leave their computer periodically, since KidSafe won't activate until the computer's been idle for the time period specified by TimeOut's value. If Mode is set to 2, KidSafe will run in the background and wait for you to press the user-defined hotkey that activates KidSafe.
+
+Password - an encoded form of the text you'll need to type in the unlock box to turn KidSafe off. Make sure you'll remember this, because it can't be recovered once you enter it. YOU SHOULDN'T EDIT THIS IN THE Prefs.dat FILE; IT'S SPECIALLY ENCODED IN A NON-RECOVERABLE FORMAT. IF YOU TRY TO EDIT THIS MANUALLY, YOU WILL BE UNABLE TO UNLOCK KIDSAFE.
+
+PutKidSafeOnTop - true or false. Specifies whether the KidSafe window should be placed on top of every window (including the Start Menu and Alt-Tab dialog) or not.
+
+TimeOut - a number value. If Mode is set to 1, KidSafe will run in the background and monitor the system. KidSafe will essentially behave like a screensaver, checking for system activity; if the system remains inactive for the number of minutes specified by TimeOut, KidSafe's fullscreen window will open. This could be extremely useful for someone who has to leave their computer periodically, since KidSafe won't activate until the computer's been idle for the time period specified by TimeOut's value.
+
+UsePasswordDialog - true or false. If set to true, the passwordbox will display a string of asterisks (*) instead of the actual password when you type it. This can be extremely useful if you're trying to stop kids who are old enough to read - they won't be able to see what you're typing.
+
+UseRelativePaths - true or false. If set to true, KidSafe will use relative paths for external files it uses (e.g. the background image); this can be useful when you need to use KidSafe from a USB drive. If set to false (the default), it'll use absolute paths.
+
+UseSystemTrayIcon - true or false. If set to true, KidSafe will show its icon in the system tray; double-clicking the tray icon will show the KidSafe window. (The tray icon is only shown in screensaver mode or hotkey mode, since it isn't necessary in normal mode.) The tray icon also serves as a reminder that KidSafe is running.
+
+The default setting for each of these options is false (to be precise, the default setting is false, 0, or nothing, depending on the value type); if you want to lock anything, you'll need to manually set the value of its setting to true. This is a safety limitation designed to avoid accidentally locking something you didn't want locked.
